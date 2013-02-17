@@ -7,7 +7,7 @@ var emitter = require('emitter')
   , event = require('event');
 
 /**
- * flags.
+ * timeoutid.
  */
 
 var tid;
@@ -69,6 +69,7 @@ status.watch = function(timeout){
 status.unwatch = function(){
   event.unbind(window, 'mousemove', status.change);
   event.unbind(window, 'keyup', status.change);
+  clearTimeout(tid);
 };
 
 /**
