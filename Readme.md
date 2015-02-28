@@ -6,7 +6,7 @@
 ## Example
 
 ```js
-var status = requrie('status');
+var status = require('status');
 status.watch();
 
 status('idle', function(){
